@@ -2,3 +2,4 @@
 /ssl/*.jks
 /consumer/src/main/resources/application.yml
 /producer/src/main/resources/application.yml
+/ssl/*.yml

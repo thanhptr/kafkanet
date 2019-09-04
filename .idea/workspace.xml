@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4b4c41b-f698-40f9-bd82-685e7e7abeb4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/consumer/src/main/java/io/project/app/KafkaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/src/main/java/io/project/app/KafkaConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer/src/main/java/io/project/model/UserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/src/main/java/io/project/model/UserRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/src/main/java/io/project/model/UserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/producer/src/main/java/io/project/model/UserRequest.java" afterDir="false" />
-    </list>
+    <list default="true" id="e4b4c41b-f698-40f9-bd82-685e7e7abeb4" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/consumer/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/producer/target/" />
@@ -110,8 +106,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/consumer/src/main/java/io/project/app/KafkaConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="87" selection-start-line="87" selection-end-line="87" />
+            <state relative-caret-position="58">
+              <caret line="79" column="5" lean-forward="true" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -485,25 +481,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1567572191846</updated>
-      <workItem from="1567572195564" duration="11729000" />
+      <workItem from="1567572195564" duration="12513000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11729000" />
+    <option name="totallyTimeSpent" value="12513000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info id="Web" order="2" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.1913646" />
+      <window_info content_ui="combo" id="Project" order="3" visible="true" weight="0.1913646" />
       <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
-      <window_info anchor="bottom" id="Run Dashboard" order="2" visible="true" weight="0.46153846" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="2" visible="true" weight="0.46153846" />
       <window_info anchor="bottom" id="Spring" order="3" />
       <window_info anchor="bottom" id="Messages" order="4" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="5" />
@@ -698,8 +693,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/consumer/src/main/java/io/project/app/KafkaConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
+        <state relative-caret-position="58">
+          <caret line="79" column="5" lean-forward="true" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
         </state>
       </provider>
     </entry>
