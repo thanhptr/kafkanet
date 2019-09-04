@@ -1,0 +1,1 @@
+curl -X POST -H "Content-Type: application/json" http://localhost:2035/api/v2/users/user -d '{ "userId": 1, "companyId": 1, "email": "one@one.com", "companyName": "One Jsc" }'

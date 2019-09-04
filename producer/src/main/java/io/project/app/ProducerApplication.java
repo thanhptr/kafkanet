@@ -20,6 +20,7 @@ public class ProducerApplication {
 
 	
     public static void main(String[] args) {
+
         final SpringApplication application = new SpringApplication(ProducerApplication.class);
         application.setBannerMode(Banner.Mode.OFF);
         application.setWebApplicationType(WebApplicationType.SERVLET);
