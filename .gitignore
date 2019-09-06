@@ -73,4 +73,5 @@ fabric.properties
 /producer/src/main/resources/application.yml
 /ssl/*.jks
 /ssl/*.yml
-/nginx/logs
+/nginx/logs/*.log
+/nginx/logs/*.pid
