@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 cd ..
-mvn clean package -U -Dmaven.test.skip=true
+mvn package -U -Dmaven.test.skip=true
