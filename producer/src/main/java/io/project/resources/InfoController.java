@@ -65,9 +65,12 @@ public class InfoController {
     @GetMapping("/async")
     public ResponseEntity<String> async(@RequestParam(required = false) String value) throws InterruptedException, ExecutionException {
         final int requestId = asyncCounter.incrementAndGet();
+        if (value == null) {
+            value = requestId + "";
+        }
 
         UserRequest producerRequest = new UserRequest();
-        producerRequest.setValue(value == null ? (requestId + "") : value);
+        producerRequest.setValue(value);
         // create producer record
         ProducerRecord<String, UserRequest> record = new ProducerRecord<>(requestTopic, producerRequest);
         // set reply topic in header
