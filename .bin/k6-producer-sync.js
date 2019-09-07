@@ -2,8 +2,8 @@
 import { check } from 'k6';
 import http from 'k6/http';
 
-var USERS = 3;
-let RAMP_UP = "3s";
+var USERS = 4;
+let RAMP_UP = "0s";
 let RUNNING = "10s";
 let RAMP_DOWN = "10s";
  

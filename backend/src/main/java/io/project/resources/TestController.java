@@ -20,20 +20,26 @@ public class TestController {
 
     @GetMapping("/action")
     public ResponseEntity<String> action(@RequestParam(required = false) String value) throws InterruptedException {
-        int currentCounter = counter.incrementAndGet();
-        if (currentCounter > 3) {
-            // Error
-            counter.decrementAndGet();
+        if (counter.intValue() >= 3) {
+            Thread.sleep(1000);
             return new ResponseEntity<>(HttpStatus.TOO_MANY_REQUESTS);
         } else {
-            try {
-                Thread.sleep(1000);
-                return new ResponseEntity<>(
-                        "[REPLY-"+ currentCounter +"] " + (value == null ? "<null>" : value) + " @(" + System.currentTimeMillis() + ")",
-                        HttpStatus.OK
-                );
-            } finally {
+            int currentCounter = counter.incrementAndGet();
+            if (currentCounter > 3) {
+                // Error
                 counter.decrementAndGet();
+                Thread.sleep(1000);
+                return new ResponseEntity<>(HttpStatus.TOO_MANY_REQUESTS);
+            } else {
+                try {
+                    Thread.sleep(1000);
+                    return new ResponseEntity<>(
+                            "[REPLY-"+ currentCounter +"] " + (value == null ? "<null>" : value) + " @(" + System.currentTimeMillis() + ")",
+                            HttpStatus.OK
+                    );
+                } finally {
+                    counter.decrementAndGet();
+                }
             }
         }
     }
