@@ -2,6 +2,19 @@
 import { check } from 'k6';
 import http from 'k6/http';
 
+var USERS = 3;
+let RAMP_UP = "3s";
+let RUNNING = "10s";
+let RAMP_DOWN = "10s";
+ 
+export let options = {
+  stages: [
+    { target: USERS, duration: RAMP_UP },
+    { target: USERS, duration: RUNNING },
+    { target: 0, duration: RAMP_DOWN },
+  ]
+};
+
 export default function() {
     let res = http.get("http://localhost:2010/api/test/action?value=abc");
     check(res, {
