@@ -2,21 +2,32 @@
 import { check } from 'k6';
 import http from 'k6/http';
 
-var USERS = 4;
-let RAMP_UP = "0s";
-let RUNNING = "10s";
-let RAMP_DOWN = "10s";
- 
 export let options = {
   stages: [
-    { target: USERS, duration: RAMP_UP },
-    { target: USERS, duration: RUNNING },
-    { target: 0, duration: RAMP_DOWN },
+    // // VERY HIGH
+    // { target: 3, duration: "10s" },
+    // { target: 10, duration: "10s" },
+    // { target: 10, duration: "20s" },
+    // { target: 0, duration: "30s" },
+
+    // // HIGH
+    // { target: 3, duration: "10s" },
+    // { target: 6, duration: "10s" },
+    // { target: 6, duration: "20s" },
+    // { target: 0, duration: "20s" },
+
+    // // A LITLE HIGH
+    // { target: 4, duration: "10s" },
+    // { target: 0, duration: "10s" },
+
+    // NORMAL
+    { target: 3, duration: "10s" },
+    { target: 0, duration: "10s" },
   ]
 };
 
 export default function() {
-    let res = http.get("http://127.0.0.1:2000/api/test/sync?value=abc");
+    let res = http.get("http://127.0.0.1:2000/api/test/sync?value=");
     check(res, {
         "OK": r => r.status === 200
     });
