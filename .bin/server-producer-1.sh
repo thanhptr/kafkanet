@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-java -jar -Dserver.port=2001 -Dkafka.consumergroup=d2.checkout-ticket.confirm-reply.x-loadtest0 -Dkafka.topic.request-topic=d2.checkout-ticket.confirm-request.x -Dkafka.topic.requestreply-topic=d2.checkout-ticket.confirm-reply.x  ../producer/target/producer.jar
+java -jar -Dserver.port=2001 -Dkafka.consumergroup=d2.checkout-ticket.confirm-reply.x-t0 -Dkafka.topic.request-topic=d2.checkout-ticket.confirm-request.x -Dkafka.topic.requestreply-topic=d2.checkout-ticket.confirm-reply.x  ../producer/target/producer.jar
