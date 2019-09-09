@@ -100,8 +100,9 @@ public class KafkaConfig {
 
     @Bean
     public ReplyingKafkaTemplate<String, UserRequest, UserRequest> replyKafkaTemplate(ProducerFactory<String, UserRequest> pf, KafkaMessageListenerContainer<String, UserRequest> container) {
-        return new ReplyingKafkaTemplate<>(pf, container);
-
+        ReplyingKafkaTemplate<String, UserRequest, UserRequest> replyingKafkaTemplate = new ReplyingKafkaTemplate<>(pf, container);
+        replyingKafkaTemplate.setReplyTimeout(12 * 60 * 1000);
+        return replyingKafkaTemplate;
     }
 
     @Bean

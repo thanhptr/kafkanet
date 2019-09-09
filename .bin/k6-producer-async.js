@@ -5,8 +5,8 @@ import http from 'k6/http';
 
 // SIMPLE PEAK
 export let options = {
-  vus: 15,
-  iterations: 15
+  vus: 100,
+  iterations: 100
 };
 
 // export let options = {
@@ -36,7 +36,10 @@ export let options = {
 // };
 
 export default function() {
-    let res = http.get("http://127.0.0.1:2000/api/test/async?value=");
+  let params = {
+    timeout: 12 * 60 * 1000
+  };  
+  let res = http.get("http://127.0.0.1:2000/api/test/async?value=", params);
     check(res, {
         "OK": r => r.status === 200
     });
